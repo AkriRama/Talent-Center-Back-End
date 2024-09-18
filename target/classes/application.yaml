@@ -1,0 +1,97 @@
+#-----------------------------------
+--- # Application
+#-----------------------------------
+
+spring:
+  application:
+    name: TALENTCENTER
+  profiles:
+    active:
+      - "development"
+  main:
+    lazy-initialization: false
+server:
+  port: 8081
+
+#-----------------------------------
+--- # Database
+#-----------------------------------
+
+spring:
+  datasource:
+    url: jdbc:postgresql://cloudias79.com:5545/new_db_talentcenter
+    username: usrtalentcenter
+    password: m1QVs3zKymgPduz
+#    url: jdbc:postgresql://10.10.5.180:5432/new_db_talentcenter
+#    password: m1QVs3zKymgPduz
+#    username: usrtalentcenter
+#-----------------------------------
+--- # Hibernate
+#-----------------------------------
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+
+--- ## Production
+
+spring:
+  config:
+    activate:
+      on-profile: "production"
+  main:
+    lazy-initialization: true
+
+#-----------------------------------
+--- # Minio
+#-----------------------------------
+application:
+  minio:
+    url: https://minio.cloudias79.com/
+    username: devtalentcenter
+    password: as4Dx6L4Uf1zFkyy
+    bucketName: talent-center-app
+
+#-----------------------------------
+--- # i18n & L10n
+#-----------------------------------
+
+spring:
+  messages:
+    encoding: UTF-8
+    basename: i18n/messages
+
+#-----------------------------------
+--- # Logging
+#-----------------------------------
+
+logging:
+  level:
+    com:
+      tujuhsembilan: TRACE
+
+--- ## Production
+
+spring:
+  config:
+    activate:
+      on-profile: "production"
+logging:
+  level:
+    com:
+      tujuhsembilan: INFO
+
+#-----------------------------------
+--- # Miscellanous
+#-----------------------------------
+
+spring:
+  output:
+    ansi:
+      enabled: always
+
+# # -----------------------------------
+# --- #
+# # -----------------------------------

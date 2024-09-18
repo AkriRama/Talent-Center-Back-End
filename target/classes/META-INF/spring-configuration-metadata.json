@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "name": "application.minio",
+      "type": "lib.minio.configuration.property.MinioProp",
+      "sourceType": "lib.minio.configuration.property.MinioProp"
+    }
+  ],
+  "properties": [
+    {
+      "name": "application.minio.bucket-name",
+      "type": "java.lang.String",
+      "sourceType": "lib.minio.configuration.property.MinioProp"
+    },
+    {
+      "name": "application.minio.get-error-message",
+      "type": "java.lang.String",
+      "sourceType": "lib.minio.configuration.property.MinioProp"
+    },
+    {
+      "name": "application.minio.password",
+      "type": "java.lang.String",
+      "sourceType": "lib.minio.configuration.property.MinioProp"
+    },
+    {
+      "name": "application.minio.post-error-message",
+      "type": "java.lang.String",
+      "sourceType": "lib.minio.configuration.property.MinioProp"
+    },
+    {
+      "name": "application.minio.url",
+      "type": "java.lang.String",
+      "sourceType": "lib.minio.configuration.property.MinioProp"
+    },
+    {
+      "name": "application.minio.username",
+      "type": "java.lang.String",
+      "sourceType": "lib.minio.configuration.property.MinioProp"
+    }
+  ],
+  "hints": []
+}
